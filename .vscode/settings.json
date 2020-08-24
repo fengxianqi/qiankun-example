@@ -1,0 +1,9 @@
+{
+  "eslint.workingDirectories": ["yunying", "editor", "login", "approval"],
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.useIgnoreFiles": false
+}
