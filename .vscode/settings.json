@@ -1,5 +1,5 @@
 {
-  "eslint.workingDirectories": ["yunying", "editor", "login", "approval"],
+  "eslint.workingDirectories": ["main", "sub-vue", "sub-react"],
   "eslint.enable": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
