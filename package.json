@@ -1,5 +1,5 @@
 {
-  "name": "qiankun-vue",
+  "name": "qiankun-example",
   "version": "0.0.1",
   "description": "qiankun demo",
   "main": "index.js",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@fengxianqi.github.com:fengxianqi/qiankun-vue.git"
+    "url": "git@fengxianqi.github.com:fengxianqi/qiankun-example.git"
   },
   "keywords": [
     "qiankun",
-    "qiankun-vue",
+    "qiankun-example",
     "demo"
   ],
   "author": "fengxianqi",
