@@ -7,13 +7,16 @@ const microApps = [
     props: {
       routerBase: '/sub-vue'
     }
+  },
+  {
+    name: 'sub-react',
+    entry: '//localhost:7788/',
+    activeRule: '/sub-react',
+    container: '#subapp-viewport', // 子应用挂载的div
+    props: {
+      routerBase: '/sub-react'
+    }
   }
-  // {
-  //   name: 'subapp2',
-  //   entry: '//localhost:7788/',
-  //   activeRule: '/subapp2',
-  //   container: '#subapp-viewport'
-  // }
 ]
 
 export default microApps

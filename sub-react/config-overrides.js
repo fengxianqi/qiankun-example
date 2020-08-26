@@ -1,14 +1,18 @@
-const { name } = require('./package');
+const { name } = require('./package.json');
+console.log(name)
 
 module.exports = {
   webpack: function override(config, env) {
-    const copyConfig = { ...config };
-    copyConfig.output.library = `${name}-[name]`;
-    copyConfig.output.libraryTarget = 'umd';
-    copyConfig.output.jsonpFunction = `webpackJsonp_${name}`;
+    config.entry = config.entry.filter(
+      (e) => !e.includes('webpackHotDevClient')
+    );
+
+    config.output.library = `${name}-[name]`;
+    config.output.libraryTarget = 'umd';
+    config.output.jsonpFunction = `webpackJsonp_${name}`;
     return config;
   },
-  devServer: function (configFunction) {
+  devServer: (configFunction) => {
     return function (proxy, allowedHost) {
       const config = configFunction(proxy, allowedHost);
       config.open = false;
