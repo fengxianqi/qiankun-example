@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
 import microApps from './micro-app'
+import 'nprogress/nprogress.css'
 
 Vue.config.productionTip = false
 

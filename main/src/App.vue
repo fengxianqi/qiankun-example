@@ -6,9 +6,29 @@
 </template>
 
 <script>
+import NProgress from 'nprogress'
 export default {
   name: 'App',
-  components: {}
+  data () {
+    return {
+      isLoading: true
+    }
+  },
+  watch: {
+    isLoading (val) {
+      if (val) {
+        NProgress.start()
+      } else {
+        this.$nextTick(() => {
+          NProgress.done()
+        })
+      }
+    }
+  },
+  components: {},
+  created () {
+    NProgress.start()
+  }
 }
 </script>
 
