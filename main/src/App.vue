@@ -1,17 +1,23 @@
 <template>
   <div id="layout-wrapper">
-    <div class="layout-header">头部导航</div>
+    <div class="layout-header">
+      <ul class="mainapp-apps">
+        <li v-for="item in microApps" :key="item.name">{{ item.name }}</li>
+      </ul>
+    </div>
     <div id="subapp-viewport"></div>
   </div>
 </template>
 
 <script>
 import NProgress from 'nprogress'
+import microApps from './micro-app'
 export default {
   name: 'App',
   data () {
     return {
-      isLoading: true
+      isLoading: true,
+      microApps
     }
   },
   watch: {

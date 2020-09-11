@@ -4,8 +4,14 @@
   "description": "qiankun demo",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
   "scripts": {
+    "start": "npm-run-all --parallel start:*",
+    "start:sub-react": "cd sub-react && npm start",
+    "start:sub-vue": "cd sub-vue && npm start",
+    "start:main": "cd main && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
