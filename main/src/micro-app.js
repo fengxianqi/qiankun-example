@@ -1,13 +1,14 @@
 import store from './store'
+
 const microApps = [
   {
     name: 'sub-vue',
-    entry: '//localhost:7777/',
+    entry: process.env.VUE_APP_SUB_VUE,
     activeRule: '/sub-vue'
   },
   {
     name: 'sub-react',
-    entry: '//localhost:7788/',
+    entry: process.env.VUE_APP_SUB_REACT,
     activeRule: '/sub-react'
   }
 ]

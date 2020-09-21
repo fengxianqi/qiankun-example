@@ -40,7 +40,6 @@ export default {
       // this.current = item.name
     },
     bindCurrent () {
-      console.log('===============')
       const path = window.location.pathname
       if (this.microApps.findIndex(item => item.activeRule === path) >= 0) {
         this.current = path
