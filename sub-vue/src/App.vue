@@ -5,12 +5,22 @@
       <router-link to="/about">About</router-link> |
       <a href="#" @click="gotoSubReact" style="marin: 0 0 0 10px">跳转到sub-react</a>
     </div>
+    <div>
+      从vuex的global module的state： {{ JSON.stringify(user) }}
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
+  computed: {
+    // 通过global获取user的信息
+    ...mapState('global', {
+      user: state => state.user
+    })
+  },
   methods: {
     gotoSubReact () {
       history.pushState(null, 'sub-react', '/sub-react/')

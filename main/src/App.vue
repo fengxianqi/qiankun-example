@@ -5,6 +5,7 @@
       <ul class="sub-apps">
         <li v-for="item in microApps" :class="{active: item.activeRule === current}" :key="item.name" @click="goto(item)">{{ item.name }}</li>
       </ul>
+      <div class="userinfo">主应用的state：{{ JSON.stringify(user) }}</div>
     </div>
     <div id="subapp-viewport"></div>
   </div>
@@ -13,6 +14,7 @@
 <script>
 import NProgress from 'nprogress'
 import microApps from './micro-app'
+import store from '@/store'
 export default {
   name: 'App',
   data () {
@@ -20,6 +22,11 @@ export default {
       isLoading: true,
       microApps,
       current: '/sub-vue'
+    }
+  },
+  computed: {
+    user () {
+      return store.getGlobalState('user')
     }
   },
   watch: {
@@ -89,6 +96,7 @@ html, body{
       width: 100%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       line-height: 50px;
+      position: relative;
      .logo {
         float: left;
         margin: 0 50px;
@@ -106,6 +114,11 @@ html, body{
             text-decoration: underline;
           }
         }
+      }
+      .userinfo{
+        position: absolute;
+        right: 20px;
+        top: 0;
       }
     }
   }

@@ -29,7 +29,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
   // 独立运行时，也注册一个名为global的store module
   commonStore.globalRegister(store)
   // 模拟登录后，存储用户信息到global module
-  const userInfo = { name: 'zhangsan' } // 假设登录后取到的用户信息
+  const userInfo = { name: '我是独立运行时名字叫张三' } // 假设登录后取到的用户信息
   store.commit('global/setGlobalState', { user: userInfo })
 
   render()

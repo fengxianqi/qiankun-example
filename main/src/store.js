@@ -4,7 +4,9 @@ import Vue from 'vue'
 // 父应用的初始state
 // Vue.observable是为了让initialState变成可响应：https://cn.vuejs.org/v2/api/#Vue-observable。
 const initialState = Vue.observable({
-  user: {}
+  user: {
+    name: 'zhangsan'
+  }
 })
 
 const actions = initGlobalState(initialState)
