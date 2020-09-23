@@ -117,7 +117,7 @@ html, body{
       }
       .userinfo{
         position: absolute;
-        right: 20px;
+        right: 100px;
         top: 0;
       }
     }
