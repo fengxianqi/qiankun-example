@@ -16,6 +16,7 @@ function render (props = {}) {
     mode: 'history',
     routes
   })
+
   instance = new Vue({
     router,
     store,
