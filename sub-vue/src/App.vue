@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     gotoSubReact () {
-      history.pushState(null, 'sub-react', '/sub-react/')
+      history.pushState(null, 'sub-react', '/sub-react')
     }
   }
 }
