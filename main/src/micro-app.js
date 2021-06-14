@@ -10,6 +10,11 @@ const microApps = [
     name: 'sub-react',
     entry: process.env.VUE_APP_SUB_REACT,
     activeRule: '/sub-react'
+  },
+  {
+    name: 'sub-vue3',
+    entry: process.env.VUE_APP_SUB_VUE3,
+    activeRule: '/sub-vue3'
   }
 ]
 
