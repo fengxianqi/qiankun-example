@@ -12,9 +12,11 @@
     "install:main": "cd main && npm i",
     "install:sub-vue": "cd sub-vue && npm i",
     "install:sub-react": "cd sub-react && npm i",
+    "install:sub-vue3": "cd sub-vue3 && npm i",
     "start": "npm-run-all --parallel start:*",
     "start:sub-react": "cd sub-react && npm start",
     "start:sub-vue": "cd sub-vue && npm start",
+    "start:sub-vue3": "cd sub-vue3 && npm start",
     "start:main": "cd main && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
