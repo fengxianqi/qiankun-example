@@ -4,7 +4,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "start":"npm run dev"
+    "start": "npm run dev"
   },
   "dependencies": {
     "vue": "^3.0.5",
