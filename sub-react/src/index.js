@@ -30,7 +30,13 @@ export async function bootstrap() {
  * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
  */
 export async function mount(props) {
-  console.log(props);
+  console.log('基座下发的能力：', props);
+
+  // 可通过 props.getGlobalState() 获取基座下发的数据
+
+  // props.setGlobalState({user: {name: ''}}) 改变全局的数据
+
+  // props.onGlobalStateChange 监听全局数据的变化
   render();
 }
 /**

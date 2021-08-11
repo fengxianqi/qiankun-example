@@ -2,18 +2,21 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <a href="#" @click="gotoSubReact" style="marin: 0 0 0 10px">跳转到sub-react</a>
+      <router-link to="/about">About</router-link>
     </div>
     <div>
-      从vuex的global module的state： {{ JSON.stringify(user) }}
+      vuex的`global module`的user state：<code> {{ JSON.stringify(user) }}</code>
+    </div>
+    <div class="btns">
+      <button @click="gotoSubReact">从当前子应用内跳转到`sub-react`子应用</button>
+      <button @click="changeUsername">改变全局的用户名称</button>
     </div>
     <router-view/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
     // 通过global获取user的信息
@@ -22,8 +25,16 @@ export default {
     })
   },
   methods: {
+    // setGlobalState 是在 /common/src/store/global-register.js中定义的
+    ...mapActions('global', ['setGlobalState']),
     gotoSubReact () {
       history.pushState(null, 'sub-react', '/sub-react')
+    },
+    changeUsername () {
+      // 也可通过 store.commit('global/setGlobalState', { user: '李四' }) 进行操作
+      this.setGlobalState({
+        user: { name: '李四' + Math.round(Math.random() * 100) }
+      })
     }
   }
 }
@@ -49,6 +60,13 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.btns{
+  margin: 100px;
+}
+.btns button{
+  margin: 0 10px;
 }
 
 </style>
