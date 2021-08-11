@@ -8,7 +8,7 @@
       <ul class="sub-apps">
         <li v-for="item in microApps" :class="{active: item.activeRule === current}" :key="item.name" @click="goto(item)">{{ item.name }}</li>
       </ul>
-      <div class="userinfo">主应用的state：{{ JSON.stringify(user) }}</div>
+      <div class="userinfo">主应用的state：{{ JSON.stringify(state) }}</div>
     </div>
     <div id="subapp-viewport"></div>
   </div>
@@ -28,8 +28,12 @@ export default {
     }
   },
   computed: {
-    user () {
-      return store.getGlobalState('user')
+    state () {
+      // 如果只需要取某个命名空间下的state，比如 user ，可以加上参数
+      // return store.getGlobalState('user')
+
+      // 返回所有的state则不需添加参数
+      return store.getGlobalState()
     }
   },
   watch: {
