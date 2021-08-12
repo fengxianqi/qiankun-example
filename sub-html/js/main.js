@@ -18,7 +18,7 @@ const render = (options) => {
 };
 
 (global => {
-  global['aaa'] = {
+  global['prehtml'] = {
     bootstrap: () => {
       console.log('purehtml bootstrap');
       return Promise.resolve();
