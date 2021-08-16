@@ -11,7 +11,8 @@ const render = (options) => {
 
   // 展示基座下发的状态
   const node = document.createElement('div')
-  node.innerHTML = `基座下发的globalState： <code>${JSON.stringify(globalState)}</code>`
+  node.innerHTML = `基座下发的globalState： <code>${JSON.stringify(globalState)}</code>。<a target="_blank" href="${window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__}">打开独立运行环境</a>`
+
   document.querySelector('.container').appendChild(node)
 
   return Promise.resolve();
