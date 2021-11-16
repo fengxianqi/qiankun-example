@@ -12,6 +12,7 @@
     "install:main": "cd main && npm i",
     "install:sub-vue": "cd sub-vue && npm i",
     "install:sub-react": "cd sub-react && npm i",
+    "install:sub-html": "cd sub-html && npm i",
     "start": "npm-run-all --parallel start:*",
     "start:sub-react": "cd sub-react && npm start",
     "start:sub-vue": "cd sub-vue && npm start",
